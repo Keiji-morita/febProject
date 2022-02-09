@@ -1,3 +1,4 @@
+import 'package:febproject/completeMemo.dart';
 import 'package:flutter/material.dart';
 import 'package:febproject/memoArea.dart';
 
@@ -16,7 +17,11 @@ class _voiceTexterState extends State<voiceTexter> {
       body:  const Center(child: Text('-----------------')),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-    onPressed: () {},
+    onPressed: () {
+      Navigator.push(context, MaterialPageRoute(
+          builder: (context) => completeMemo()
+      ));
+    },
     backgroundColor: Colors.red,
     child: const Icon(Icons.pause_circle_filled),
      ),

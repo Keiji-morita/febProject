@@ -13,43 +13,54 @@ class memoArea extends StatefulWidget {
 class _memoAreaState extends State<memoArea> {
   @override
   Widget build(BuildContext context) {
+    var listMemo = [];
     return Scaffold(
       appBar: AppBar(
         title:  const Text('home'),
       ),
-      body: Column(
-        children: [
-         Container(
-          padding: EdgeInsets.fromLTRB(10,10,10,0),
-          height: 220,
-          width: double.maxFinite,
-          child: Card(
-            elevation: 5,
-          ),
-        ),
-
-         Container(
-          padding: EdgeInsets.fromLTRB(10,10,10,0),
-          height: 220,
-          width: double.maxFinite,
-          child: Card(
-            elevation: 5,
-          ),
-        ),
-
-          Container(
-            padding: EdgeInsets.fromLTRB(10,10,10,0),
-            height: 220,
-            width: double.maxFinite,
-            child: Card(
-              elevation: 5,
+        body: ListView(
+            children: [
+             Container(
+               padding: EdgeInsets.fromLTRB(10,10,10,0),
+               height: 220,
+               width: double.maxFinite,
+               child: Card(
+               elevation: 5,
+               ),
             ),
-          ),
+
+              Container(
+                padding: EdgeInsets.fromLTRB(10,10,10,0),
+                height: 220,
+                width: double.maxFinite,
+                child: Card(
+                  elevation: 5,
+                ),
+              ),
+
+              Container(
+                padding: EdgeInsets.fromLTRB(10,10,10,0),
+                height: 220,
+                width: double.maxFinite,
+                child: Card(
+                  elevation: 5,
+                ),
+              ),
+
+              Container(
+                padding: EdgeInsets.fromLTRB(10,10,10,0),
+                height: 220,
+                width: double.maxFinite,
+                child: Card(
+                  elevation: 5,
+                ),
+              ),
 
 
-        ],
-      ),
-        floatingActionButton: FloatingActionButton(
+            ]
+        ),
+
+         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(
                 builder: (context) => voiceTexter()
@@ -60,5 +71,6 @@ class _memoAreaState extends State<memoArea> {
         )
 
          );
+
   }
 }
