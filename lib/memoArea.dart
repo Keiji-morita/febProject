@@ -13,52 +13,23 @@ class memoArea extends StatefulWidget {
 class _memoAreaState extends State<memoArea> {
   @override
   Widget build(BuildContext context) {
-    var listMemo = [];
+    var listItem = ["メルカリ","Yahoo","Amazon"];
     return Scaffold(
       appBar: AppBar(
         title:  const Text('home'),
       ),
-        body: ListView(
-            children: [
-             Container(
-               padding: EdgeInsets.fromLTRB(10,10,10,0),
-               height: 220,
-               width: double.maxFinite,
-               child: Card(
-               elevation: 5,
-               ),
-            ),
-
+        body: ListView.builder(
+          itemBuilder: (BuildContext context, int index) {
+            return
               Container(
-                padding: EdgeInsets.fromLTRB(10,10,10,0),
-                height: 220,
-                width: double.maxFinite,
-                child: Card(
-                  elevation: 5,
-                ),
+              padding: EdgeInsets.fromLTRB(10,10,10,0),
+              height: 220,
+              width: double.maxFinite,
+              child: Card(
+                elevation: 5,
               ),
-
-              Container(
-                padding: EdgeInsets.fromLTRB(10,10,10,0),
-                height: 220,
-                width: double.maxFinite,
-                child: Card(
-                  elevation: 5,
-                ),
-              ),
-
-              Container(
-                padding: EdgeInsets.fromLTRB(10,10,10,0),
-                height: 220,
-                width: double.maxFinite,
-                child: Card(
-                  elevation: 5,
-                ),
-              ),
-
-
-            ]
-        ),
+            );
+          }, itemCount: listItem.length,),
 
          floatingActionButton: FloatingActionButton(
           onPressed: () {
