@@ -25,7 +25,7 @@ class _completeMemoState extends State<completeMemo> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-         Text(_text),
+         Text(widget._text),
 
 
           Row(

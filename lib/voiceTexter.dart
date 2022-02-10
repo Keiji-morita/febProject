@@ -8,9 +8,11 @@ class voiceTexter extends StatefulWidget {
 }
 
 class _voiceTexterState extends State<voiceTexter> {
-  @override
-  Widget build(BuildContext context) {
+    var _textController = TextEditingController();
     String _text = '';
+    @override
+  Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Taking note with voice'),
@@ -20,12 +22,14 @@ class _voiceTexterState extends State<voiceTexter> {
       children: <Widget>[
         Text(_text, style: TextStyle(color: Colors.blue)),
         const SizedBox(height: 8),
+
         TextField(
           onChanged: (String value) {
             setState(() {
               _text = value;
             });
           },
+          controller: _textController,
         ),
       ],
     ),
@@ -33,6 +37,7 @@ class _voiceTexterState extends State<voiceTexter> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
     onPressed: () {
+      print(_text);
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => completeMemo(_text)),
